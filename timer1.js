@@ -1,5 +1,4 @@
 const args = process.argv.slice(2);
-let timeElapsed = 0
 
 for (let arg of args) {
   const interval = Number(arg);
@@ -11,10 +10,10 @@ for (let arg of args) {
     continue;
   }
 
-  let seconds = interval * 1000
+  let seconds = interval * 1000;
 
   setTimeout(() => {
     process.stdout.write('\x07');
-    console.log('beep')
-  }, seconds)
+    console.log('beep');
+  }, seconds);
 }
